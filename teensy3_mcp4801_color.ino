@@ -94,8 +94,8 @@ void loop() {
         SPI.transfer(dacoutL);
         delayMicroseconds(5);
         digitalWrite(DAC1SEL, HIGH);
-
-        // wait a little before the B dac
+        // done with dac1
+        // wait a little before dac2
         delayMicroseconds(5);
 
         // band 2, DAC2
@@ -107,8 +107,9 @@ void loop() {
         SPI.transfer(dacoutL);
         delayMicroseconds(5);            // let the DAC settle
         digitalWrite(DAC2SEL, HIGH);
-        // done with dac1 A and B
-
+        // done with dac2
+        // wait a little before dac3
+        delayMicroseconds(5);
 
         // band 3, DAC3
         dacoutH = 4801CONFIGBITS | ((band3>>4) & 0x0f);
@@ -119,8 +120,8 @@ void loop() {
         SPI.transfer(dacoutL);
         delayMicroseconds(5);
         digitalWrite(DAC3SEL, HIGH);
-
-        // wait a little before the B dac
+        // done with dac3
+        // wait a little before dac4
         delayMicroseconds(5);
 
         // band 4 DAC4
@@ -132,9 +133,8 @@ void loop() {
         SPI.transfer(dacoutL);
         delayMicroseconds(5);            // let the DAC settle
         digitalWrite(DAC4SEL, HIGH);
-        //done with dac2 A and B
-
-        // wait a little then
+        // done with dac4
+        
         // latch all dac data to outputs
         delayMicroseconds(5);
         digitalWrite(LDACALL,LOW);
