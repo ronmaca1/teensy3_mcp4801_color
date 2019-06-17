@@ -58,13 +58,8 @@ void setup() {
     // pinMode(DAC5SEL,OUTPUT);
     digitalWrite(LDACALL,HIGH);
     pinMode(LDACALL,OUTPUT);
-    
-
-    //pinMode(13,OUTPUT);
-    //digitalWrite(13,LOW);
     pinMode(AUDIO,INPUT);
-    //analogReference(INTERNAL);
-    //analogReference(DEFAULT);
+
 }
 
 void loop() {
