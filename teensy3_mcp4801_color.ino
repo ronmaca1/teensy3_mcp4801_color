@@ -12,8 +12,8 @@
 #define DAC4SEL     6
 //#define DAC5SEL     7
 #define LDACALL     14
-// swap out for MCP4801 with internal reference and a gain of 2 setting
-// no buffer on vref, gain of 2, shdn disabled  
+
+// no buffer on vref, gain of 2 (4.096V), shdn disabled  
 // gives us the high Nybble of the high Byte below
 #define 4801CONFIGBITS 0x10
 

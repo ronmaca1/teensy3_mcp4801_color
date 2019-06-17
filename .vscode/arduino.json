@@ -1,0 +1,8 @@
+{
+    "board": "arduino:avr:pro",
+    "configuration": "cpu=8MHzatmega328",
+    "port": "COM3",
+    "output": "../build",
+    "sketch": "programmable_pwm_relay.ino",
+    "programmer": "USBtinyISP"
+}
