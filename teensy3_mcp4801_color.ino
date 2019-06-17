@@ -89,54 +89,54 @@ void loop() {
         dacoutH = 4801CONFIGBITS | ((band1>>4) & 0x0F);
         dacoutL = (band1<<4) & 0xF0;
         digitalWrite(DAC1SEL, LOW);
-        delayMicroseconds(5);            // let the DAC get ready
+        delayMicroseconds(1);            // let the DAC get ready
         SPI.transfer(dacoutH);
         SPI.transfer(dacoutL);
-        delayMicroseconds(5);
+        delayMicroseconds(1);
         digitalWrite(DAC1SEL, HIGH);
         // done with dac1
         // wait a little before dac2
-        delayMicroseconds(5);
+        delayMicroseconds(1);
 
         // band 2, DAC2
         dacoutH = 4801CONFIGBITS | ((band2>>4) & 0x0F);
         dacoutL = (band2<<4) & 0xF0;
         digitalWrite(DAC2SEL, LOW);
-        delayMicroseconds(5);
+        delayMicroseconds(1);
         SPI.transfer(dacoutH);
         SPI.transfer(dacoutL);
-        delayMicroseconds(5);            // let the DAC settle
+        delayMicroseconds(1);            // let the DAC settle
         digitalWrite(DAC2SEL, HIGH);
         // done with dac2
         // wait a little before dac3
-        delayMicroseconds(5);
+        delayMicroseconds(1);
 
         // band 3, DAC3
         dacoutH = 4801CONFIGBITS | ((band3>>4) & 0x0f);
         dacoutL = (band3<<4) & 0xF0;
         digitalWrite(DAC3SEL, LOW);
-        delayMicroseconds(5);            // let the DAC get ready
+        delayMicroseconds(1);            // let the DAC get ready
         SPI.transfer(dacoutH);
         SPI.transfer(dacoutL);
-        delayMicroseconds(5);
+        delayMicroseconds(1);
         digitalWrite(DAC3SEL, HIGH);
         // done with dac3
         // wait a little before dac4
-        delayMicroseconds(5);
+        delayMicroseconds(1);
 
         // band 4 DAC4
         dacoutH = 4801CONFIGBITS | ((band4>>4) & 0x0f);
         dacoutL = (band4<<4) & 0xF0;
         digitalWrite(DAC4SEL, LOW);
-        delayMicroseconds(5);
+        delayMicroseconds(1);
         SPI.transfer(dacoutH);
         SPI.transfer(dacoutL);
-        delayMicroseconds(5);            // let the DAC settle
+        delayMicroseconds(1);            // let the DAC settle
         digitalWrite(DAC4SEL, HIGH);
         // done with dac4
-        
+
         // latch all dac data to outputs
-        delayMicroseconds(5);
+        delayMicroseconds(1);
         digitalWrite(LDACALL,LOW);
         delayMicroseconds(1);
         digitalWrite(LDACALL,HIGH);
